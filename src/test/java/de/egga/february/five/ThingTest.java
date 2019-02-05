@@ -8,6 +8,6 @@ class ThingTest {
     void it_should_call_for_action() {
 
         Thing thing = new Thing();
-        thing.doSome();
+        String answer = thing.doSome();
     }
 }
