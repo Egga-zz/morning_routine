@@ -3,6 +3,6 @@ package de.egga.february.five;
 public class FizzBuzzGame {
     public String answer() {
 
-        return null;
+        return "1";
     }
 }
