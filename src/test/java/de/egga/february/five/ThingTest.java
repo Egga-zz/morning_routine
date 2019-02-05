@@ -7,6 +7,7 @@ class ThingTest {
     @Test
     void it_should_call_for_action() {
 
-        new Thing();
+        Thing thing = new Thing();
+        thing.doSome();
     }
 }
