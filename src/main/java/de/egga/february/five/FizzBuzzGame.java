@@ -1,8 +1,9 @@
 package de.egga.february.five;
 
-public class FizzBuzzGame {
-    public String answer() {
+class FizzBuzzGame {
 
-        return "1";
+    String answer(Integer number) {
+
+        return number.toString();
     }
 }
