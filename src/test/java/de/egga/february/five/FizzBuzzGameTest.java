@@ -2,12 +2,12 @@ package de.egga.february.five;
 
 import org.junit.jupiter.api.Test;
 
-class ThingTest {
+class FizzBuzzGameTest {
 
     @Test
     void it_should_call_for_action() {
 
-        Thing thing = new Thing();
-        String answer = thing.doSome();
+        FizzBuzzGame game = new FizzBuzzGame();
+        String answer = game.answer();
     }
 }
