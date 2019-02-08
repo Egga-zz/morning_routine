@@ -28,4 +28,12 @@ class FizzBuzzGameTest {
         assertThat(game.answer(6)).isEqualTo("fizz");
     }
 
+    @Test
+    void it_should_return_buzz_on_multiples_of_five() {
+
+        assertThat(game.answer(5)).isEqualTo("buzz");
+
+        assertThat(game.answer(10)).isEqualTo("buzz");
+    }
+
 }

@@ -3,6 +3,7 @@ package de.egga;
 class FizzBuzz {
 
     private static final String FIZZ = "fizz";
+    private static final String BUZZ = "buzz";
 
     String answer(Integer number) {
 
@@ -10,10 +11,17 @@ class FizzBuzz {
             return FIZZ;
         }
 
+        if (isMultipleOfFive(number)) {
+            return BUZZ;
+        }
+
         return number.toString();
     }
 
     private boolean isMultipleOfThree(Integer number) {
         return number % 3 == 0;
+    }
+    private boolean isMultipleOfFive(Integer number) {
+        return number % 5 == 0;
     }
 }
