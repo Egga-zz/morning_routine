@@ -2,8 +2,18 @@ package de.egga;
 
 class FizzBuzz {
 
-    public String answer(Integer number) {
+    private static final String FIZZ = "fizz";
+
+    String answer(Integer number) {
+
+        if (isMultipleOfThree(number)) {
+            return FIZZ;
+        }
 
         return number.toString();
+    }
+
+    private boolean isMultipleOfThree(Integer number) {
+        return number % 3 == 0;
     }
 }

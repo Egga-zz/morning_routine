@@ -1,5 +1,7 @@
 package de.egga;
 
+import org.assertj.core.api.SoftAssertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,23 +9,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 class FizzBuzzGameTest {
 
 
+    FizzBuzz game = new FizzBuzz();
+
+
     @Test
     void it_should_return_unaltered_number() {
 
-        FizzBuzz game = new FizzBuzz();
-
-        String answer = game.answer(1);
-
-        assertThat(answer).isEqualTo("1");
+        assertThat(game.answer(1)).isEqualTo("1");
+    
+        assertThat(game.answer(2)).isEqualTo("2");
     }
 
     @Test
-    void it_should_return_another_unaltered_number() {
+    void it_should_return_fizz_on_multiples_of_three() {
 
-        FizzBuzz game = new FizzBuzz();
+        assertThat(game.answer(3)).isEqualTo("fizz");
 
-        String answer = game.answer(2);
-
-        assertThat(answer).isEqualTo("2");
+        assertThat(game.answer(6)).isEqualTo("fizz");
     }
+
 }
