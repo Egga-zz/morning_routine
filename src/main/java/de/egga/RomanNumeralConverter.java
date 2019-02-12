@@ -1,8 +1,15 @@
 package de.egga;
 
-public class RomanNumeralConverter {
-    public String toRoman(int i) {
+import static org.apache.commons.lang3.StringUtils.repeat;
 
-        return "I";
+class RomanNumeralConverter {
+
+    String toRoman(int number) {
+
+        if (number <= 3) {
+            return repeat("I", number);
+
+        }
+        return "";
     }
 }
