@@ -11,7 +11,7 @@ public class AccountTest {
         Account account = new Account();
         account.deposit(500);
         String statement = account.printStatement();
-        assertThat(statement).isEqualTo("500");
+        assertThat(statement).contains("500");
     }
 
     @Test
@@ -21,5 +21,14 @@ public class AccountTest {
         account.deposit(300);
         String statement = account.printStatement();
         assertThat(statement).contains("200", "300");
+    }
+
+    @Test
+    void it_should_print_balance_in_statement() {
+        Account account = new Account();
+        account.deposit(200);
+        account.deposit(300);
+        String statement = account.printStatement();
+        assertThat(statement).contains("500");
     }
 }
