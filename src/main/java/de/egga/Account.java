@@ -1,17 +1,24 @@
 package de.egga;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.util.stream.Collectors.joining;
+
 public class Account {
 
-    private Integer amount;
+    private List<Integer> amounts = new ArrayList<>();
 
 
     public void deposit(Integer amount) {
 
-        this.amount = amount;
+        this.amounts.add(amount);
     }
 
     public String printStatement() {
 
-        return amount.toString();
+        return amounts.stream()
+                .map(n -> n.toString())
+                .collect(joining("\n"));
     }
 }
