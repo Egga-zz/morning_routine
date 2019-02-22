@@ -6,6 +6,6 @@ class DateProvider {
 
     LocalDate getCurrentDate() {
 
-        return null;
+        return LocalDate.now();
     }
 }
