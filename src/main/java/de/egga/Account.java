@@ -8,6 +8,6 @@ public class Account {
 
     public String printStatement() {
 
-        return null;
+        return "100";
     }
 }
