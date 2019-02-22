@@ -1,13 +1,26 @@
 package de.egga;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Account {
 
-    void deposit(Integer amount) {
+    List<Integer> deposits = new ArrayList<>();
 
+    void deposit(Integer amount) {
+        deposits.add(amount);
     }
 
     String printStatement() {
 
-        return "100";
+        int balance = 0;
+        String statement = "";
+
+        for (Integer deposit : deposits) {
+            balance += deposit;
+            statement += deposit + "\t" + balance + "\n";
+        }
+
+        return statement;
     }
 }
