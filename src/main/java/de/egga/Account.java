@@ -27,7 +27,7 @@ class Account {
 
         for (Integer deposit : transactions) {
             balance += deposit;
-            statement += deposit + "\t" + balance + "\n";
+            statement += dateProvider.getCurrentDateAsString() + "\t" + deposit + "\t" + balance + "\n";
         }
 
         return statement;
