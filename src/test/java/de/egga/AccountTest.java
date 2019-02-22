@@ -24,4 +24,13 @@ public class AccountTest {
 
         assertThat(account.printStatement()).contains("200");
     }
+
+    @Test
+    void withdrawed_amount_should_occur_on_statement() {
+
+        account.withdraw(100);
+
+        assertThat(account.printStatement()).contains("100");
+    }
+
 }
