@@ -3,15 +3,18 @@ package de.egga;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import static java.time.format.DateTimeFormatter.ofPattern;
+
 class DateProvider {
 
-    LocalDate getCurrentDate() {
+    private DateTimeFormatter formatter = ofPattern("dd.MM.yyyy");
 
-        return LocalDate.now();
+    String getCurrentDateAsString() {
+        return getCurrentDate().format(formatter);
     }
 
-    public String getCurrentDateAsString() {
-        String formattedDate = getCurrentDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        return formattedDate;
+    private LocalDate getCurrentDate() {
+
+        return LocalDate.now();
     }
 }
