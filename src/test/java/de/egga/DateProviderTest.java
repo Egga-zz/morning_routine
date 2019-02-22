@@ -16,4 +16,11 @@ public class DateProviderTest {
         String formattedDate = date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         assertThat(formattedDate).isEqualTo("22.02.2019");
     }
+
+    @Test
+    void formatted() {
+        DateProvider dateProvider = new DateProvider();
+        String date = dateProvider.getCurrentDateAsString();
+        assertThat(date).isEqualTo("22.02.2019");
+    }
 }
