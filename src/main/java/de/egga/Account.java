@@ -1,12 +1,12 @@
 package de.egga;
 
-public class Account {
+class Account {
 
-    public void deposit(Integer amount) {
+    void deposit(Integer amount) {
 
     }
 
-    public String printStatement() {
+    String printStatement() {
 
         return "100";
     }

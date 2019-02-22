@@ -6,11 +6,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountTest {
 
+    Account account = new Account();
+
     @Test
-    void asd() {
-        Account account = new Account();
+    void deposited_amount_should_occur_on_statement() {
+
         account.deposit(100);
-        String statement = account.printStatement();
-        assertThat(statement).contains("100");
+
+        assertThat(account.printStatement()).contains("100");
     }
 }
