@@ -23,4 +23,8 @@ class Account {
 
         return statement;
     }
+
+    public void withdraw(int i) {
+        deposits.add(i*-1);
+    }
 }
