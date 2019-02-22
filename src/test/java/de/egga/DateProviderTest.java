@@ -10,5 +10,6 @@ public class DateProviderTest {
     void asd() {
         DateProvider dateProvider = new DateProvider();
         LocalDate date = dateProvider.getCurrentDate();
+
     }
 }
