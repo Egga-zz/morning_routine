@@ -2,11 +2,13 @@ package de.egga;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 public class DateProviderTest {
 
     @Test
     void asd() {
         DateProvider dateProvider = new DateProvider();
-        dateProvider.getCurrentDate();
+        LocalDate date = dateProvider.getCurrentDate();
     }
 }
