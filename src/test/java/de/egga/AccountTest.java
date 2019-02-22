@@ -6,7 +6,8 @@ public class AccountTest {
 
     @Test
     void asd() {
-        new Account();
+        Account account = new Account();
+        account.deposit();
 
     }
 }
