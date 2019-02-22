@@ -1,4 +1,4 @@
 package de.egga;
 
-public class DateProvider {
+class DateProvider {
 }

@@ -6,6 +6,6 @@ public class DateProviderTest {
 
     @Test
     void asd() {
-        new DateProvider();
+        DateProvider dateProvider = new DateProvider();
     }
 }
