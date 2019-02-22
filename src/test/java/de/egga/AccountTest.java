@@ -8,6 +8,7 @@ public class AccountTest {
     void asd() {
         Account account = new Account();
         account.deposit(100);
+        account.printStatement();
 
     }
 }
