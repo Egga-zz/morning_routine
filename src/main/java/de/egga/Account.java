@@ -5,10 +5,14 @@ import java.util.List;
 
 class Account {
 
-    private List<Integer> deposits = new ArrayList<>();
+    private List<Integer> transactions = new ArrayList<>();
 
     void deposit(Integer amount) {
-        deposits.add(amount);
+        transactions.add(amount);
+    }
+
+    void withdraw(Integer amount) {
+        transactions.add(amount * -1);
     }
 
     String printStatement() {
@@ -16,15 +20,11 @@ class Account {
         int balance = 0;
         String statement = "";
 
-        for (Integer deposit : deposits) {
+        for (Integer deposit : transactions) {
             balance += deposit;
             statement += deposit + "\t" + balance + "\n";
         }
 
         return statement;
-    }
-
-    public void withdraw(int i) {
-        deposits.add(i*-1);
     }
 }
