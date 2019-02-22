@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.doReturn;
 
 @ExtendWith(MockitoExtension.class)
 public class AccountTest {
@@ -48,7 +49,7 @@ public class AccountTest {
     @Test
     void transaction_date_should_occur_on_statement() {
 
-        Mockito.doReturn("22.02.2019").when(dateProvider).getCurrentDateAsString();
+        doReturn("22.02.2019").when(dateProvider).getCurrentDateAsString();
 
         account.deposit(100);
 
