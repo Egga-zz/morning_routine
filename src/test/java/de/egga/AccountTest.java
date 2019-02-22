@@ -15,6 +15,7 @@ public class AccountTest {
 
         assertThat(account.printStatement()).contains("100");
     }
+
     @Test
     void balance_should_occur_on_statement() {
 

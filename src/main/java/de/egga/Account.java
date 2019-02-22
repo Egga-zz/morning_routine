@@ -5,7 +5,7 @@ import java.util.List;
 
 class Account {
 
-    List<Integer> deposits = new ArrayList<>();
+    private List<Integer> deposits = new ArrayList<>();
 
     void deposit(Integer amount) {
         deposits.add(amount);
