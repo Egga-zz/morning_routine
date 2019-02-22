@@ -1,11 +1,16 @@
 package de.egga;
 
+import lombok.RequiredArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@RequiredArgsConstructor
 class Account {
 
-    private List<Integer> transactions = new ArrayList<>();
+    private final List<Integer> transactions = new ArrayList<>();
+
+    private final DateProvider dateProvider;
 
     void deposit(Integer amount) {
         transactions.add(amount);
