@@ -7,5 +7,6 @@ public class DateProviderTest {
     @Test
     void asd() {
         DateProvider dateProvider = new DateProvider();
+        dateProvider.getCurrentDate();
     }
 }
